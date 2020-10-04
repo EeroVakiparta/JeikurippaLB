@@ -1,1 +1,1 @@
-export * from './jeikupg.datasource';
+export * from './psql.datasource';

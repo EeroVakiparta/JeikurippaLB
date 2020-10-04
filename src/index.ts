@@ -1,9 +1,9 @@
-import {ApplicationConfig, JeikurippalpApplication} from './application';
+import {ApplicationConfig, JeikurippalbApplication} from './application';
 
 export * from './application';
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new JeikurippalpApplication(options);
+  const app = new JeikurippalbApplication(options);
   await app.boot();
   await app.start();
 

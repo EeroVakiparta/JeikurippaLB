@@ -22,17 +22,22 @@ export class Location extends Entity {
   x: number;
 
   @property({
-    type: 'string',
+    type: 'number',
     required: true,
   })
-  y: string;
+  y: number;
 
   @property({
     type: 'string',
     required: true,
   })
-  image: string;
+  background: string;
 
+  @property({
+    type: 'string',
+    default: 'Insert lore here',
+  })
+  lore?: string;
 
   constructor(data?: Partial<Location>) {
     super(data);

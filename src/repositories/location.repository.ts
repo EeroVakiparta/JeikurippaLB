@@ -1,14 +1,16 @@
-import {inject} from '@loopback/core';
 import {DefaultCrudRepository} from '@loopback/repository';
-import {JeikupgDataSource} from '../datasources';
 import {Location, LocationRelations} from '../models';
+import {PsqlDataSource} from '../datasources';
+import {inject} from '@loopback/core';
 
 export class LocationRepository extends DefaultCrudRepository<
   Location,
   typeof Location.prototype.id,
   LocationRelations
 > {
-  constructor(@inject('datasources.jeikupg') dataSource: JeikupgDataSource) {
+  constructor(
+    @inject('datasources.psql') dataSource: PsqlDataSource,
+  ) {
     super(Location, dataSource);
   }
 }

@@ -1,4 +1,4 @@
-import {JeikurippalpApplication} from '../..';
+import {JeikurippalbApplication} from '../..';
 import {
   createRestAppClient,
   givenHttpServerConfig,
@@ -14,7 +14,7 @@ export async function setupApplication(): Promise<AppWithClient> {
     // port: +process.env.PORT,
   });
 
-  const app = new JeikurippalpApplication({
+  const app = new JeikurippalbApplication({
     rest: restConfig,
   });
 
@@ -27,6 +27,6 @@ export async function setupApplication(): Promise<AppWithClient> {
 }
 
 export interface AppWithClient {
-  app: JeikurippalpApplication;
+  app: JeikurippalbApplication;
   client: Client;
 }
