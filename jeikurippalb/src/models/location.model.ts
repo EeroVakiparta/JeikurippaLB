@@ -35,10 +35,9 @@ export class Location extends Entity {
 
   @property({
     type: 'string',
-    default: Insert lore here,
+    default: 'Insert lore here',
   })
   lore?: string;
-
 
   constructor(data?: Partial<Location>) {
     super(data);
